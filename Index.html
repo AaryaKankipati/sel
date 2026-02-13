@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>For Selma Haze 💖</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #1a1a1a, #2b0033);
+            color: white;
+            font-family: "Courier New", monospace;
+            text-align: center;
+            padding-top: 80px;
+            overflow: hidden;
+        }
+
+        h1 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            width: 70%;
+            margin: auto;
+            line-height: 1.6;
+            color: #ffb6f9;
+        }
+
+        button {
+            padding: 12px 25px;
+            margin: 20px;
+            font-size: 18px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        #yes {
+            background-color: hotpink;
+            color: white;
+        }
+
+        #yes:hover {
+            transform: scale(1.1);
+        }
+
+        #no {
+            background-color: gray;
+            color: white;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+
+<h1 id="loading">Scanning the universe for perfection...</h1>
+
+<div id="main" style="display:none;">
+    <h1>Selma Haze 💖</h1>
+    <h2>Will you be my Valentine?</h2>
+
+    <p>
+        Out of billions of people, my algorithm chose you. <br><br>
+        You're not just beautiful — you're poetry in motion,  
+        charm in human form, and the kind of smile that could reboot my entire system.  
+        <br><br>
+        You glow like starlight in a world full of noise.  
+        And honestly... my heart already pressed "YES."
+    </p>
+
+    <button id="yes" onclick="accepted()">YES 💘</button>
+    <button id="no" onmouseover="runAway()">No 🙃</button>
+</div>
+
+<script>
+    setTimeout(() => {
+        document.getElementById("loading").innerText = "Calculating Love Probability...";
+    }, 1500);
+
+    setTimeout(() => {
+        document.getElementById("loading").style.display = "none";
+        document.getElementById("main").style.display = "block";
+    }, 3000);
+
+    function accepted() {
+        document.body.innerHTML = `
+            <h1 style="color: hotpink; font-size:40px;">ACCESS GRANTED 💖</h1>
+            <h2>Selma Haze is officially my Valentine.</h2>
+            <h3>Mission: Romantic Chaos Begins 🚀</h3>
+        `;
+    }
+
+    function runAway() {
+        let button = document.getElementById("no");
+        button.style.top = Math.random() * window.innerHeight + "px";
+        button.style.left = Math.random() * window.innerWidth + "px";
+    }
+</script>
+
+</body>
+</html>
